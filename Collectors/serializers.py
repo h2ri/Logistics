@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from . import models
+from .models import Clients,Collectors,PostalCode
 
 class PostalCodeSerializer(serializers.ModelSerializer):
     class Meta:
@@ -11,5 +12,7 @@ class CollectersSerializer(serializers.ModelSerializer):
 
 class ClientSerializer(serializers.ModelSerializer):
 
+
     class Meta:
-        model = models.Clients
+        model = Clients
+

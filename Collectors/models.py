@@ -14,6 +14,8 @@ class Collectors(models.Model):
     addressLatitude = models.FloatField(blank=True,null=True)
     addressLogitude = models.FloatField(blank=True,null=True)
 
+    def __str__(self):
+        return str(self.name)
 
 class Clients(models.Model):
     #riders = models.ForeignKey(Collec, related_name='riders',null=True)
@@ -23,7 +25,11 @@ class Clients(models.Model):
     addressLogitude = models.FloatField(blank=True,null=True)
 
 
+    def __str__(self):
+        return str(self.name)
+
 
 class CollectorPinCodeRelation(models.Model):
     postalCode = models.ForeignKey(PostalCode, related_name='Collection_postal_Code')
     collector = models.ForeignKey(Collectors,related_name='acollectors')
+
