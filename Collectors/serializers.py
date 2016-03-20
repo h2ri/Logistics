@@ -12,7 +12,6 @@ class CollectersSerializer(serializers.ModelSerializer):
 
 class ClientSerializer(serializers.ModelSerializer):
 
-
     class Meta:
         model = Clients
 

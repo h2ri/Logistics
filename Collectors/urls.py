@@ -10,6 +10,6 @@ router.register(r'^collecter',views.CollectorsViewSet,base_name='collecter')
 urlpatterns = patterns(
     '',
     url(r'^',include(router.urls)),
+    url(r'^route/$',views.route.as_view(),name="route")
 
-    #url(r'^facebook-check/$',views.CheckForFacebook.as_view(),name="facebook-check")
 )
